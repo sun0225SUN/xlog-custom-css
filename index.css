@@ -1,10 +1,19 @@
-:root {
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+  --theme-color: #4169e1;
+}
+
+html.dark {
   --theme-color: #ff9800;
+}
+
+:root {
   --header-height: max(50vh, 400px);
-  --banner-bg-color: #fff;
-  --font-fans: -apple-system, system-ui, ui-sans-serif, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* header */
@@ -15,52 +24,12 @@
   }
 }
 
-/* footer  */
-footer {
-  position: relative;
-  margin-top: 280px;
-}
-
-footer:before {
-  content: " ";
-  background: url(./images/footer.png) center/contain no-repeat;
-  height: 368px;
-  width: 100%;
-  display: block;
-  position: absolute;
-  top: -295px;
-  left: 0;
-  pointer-events: none;
-}
-
-/* background */
-
-body {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='8' height='8' fill='none' stroke='rgb(0 0 0 / 0.1)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
-}
-
-.dark body {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='8' height='8' fill='none' stroke='rgb(255 255 255 / 0.1)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
-}
-
-.xlog-post {
-  background-color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
-}
-
-footer {
-  background-color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
-}
-
-/* header overall */
 .dark .xlog-banner {
   filter: brightness(40%);
 }
 
 .xlog-site-name {
   color: var(--theme-color);
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
-    1px 1px 0 #fff, -1.414px 0 0 #fff, 1.414px 0 0 #fff, 0 -1.414px 0 #fff,
-    0 1.414px 0 #fff;
   font-size: 35px;
 }
 
@@ -75,47 +44,39 @@ footer {
   border: none;
 }
 
-.xlog-site-description {
-  color: #97dffd;
-  text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-    0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-    0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-    0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-    0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-    0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-    0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-    0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-    0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-    0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
+/* background */
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='8' height='8' fill='none' stroke='rgb(0 0 0 / 0.1)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
 }
 
-.xlog-fab {
-  bottom: unset;
-  top: 0;
+.dark body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='8' height='8' fill='none' stroke='rgb(255 255 255 / 0.1)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
 }
 
-.xlog-back-to-top {
-  background: url("https://fastly.jsdelivr.net/gh/DIYgodLab/xLog-css@v0.0.7/scroll.png")
-    center/cover;
-  width: 70px;
-  height: 900px;
-  margin-top: 0;
-  opacity: 1;
-  border: none;
-  right: 50px;
+/* post */
+.xlog-post {
+  background-color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
 }
 
-.xlog-back-to-top.xlog-fab-inactive {
-  transform: translate(0, -900px);
+/* footer  */
+footer {
+  position: relative;
+  margin-top: 280px;
+}
+
+footer:before {
+  content: " ";
+  background: url(https://fastly.jsdelivr.net/gh/sun0225SUN/xlog-custom-css/images/footer.png)
+    center/contain no-repeat;
+  height: 368px;
+  width: 100%;
   display: block;
+  position: absolute;
+  top: -295px;
+  left: 0;
+  pointer-events: none;
 }
 
-.xlog-back-to-top i {
-  display: none;
-}
-
-@media (max-width: 1200px) {
-  .xlog-fab {
-    display: none;
-  }
+footer {
+  background-color: rgb(var(--tw-color-white) / var(--tw-text-opacity));
 }
