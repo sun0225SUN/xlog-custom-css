@@ -29,7 +29,6 @@ html.dark {
 }
 
 .xlog-site-name {
-  color: var(--theme-color);
   font-size: 35px;
 }
 
@@ -37,11 +36,28 @@ html.dark {
   .xlog-site-info {
     border: 1px solid #fff;
     transition: 0.3s ease;
+    backdrop-filter: blur(10px);
   }
 }
 
-.xlog-site-info {
+.dark .xlog-site-info {
   border: none;
+}
+
+.text-accent {
+  color: var(--theme-color) !important;
+}
+
+.xlog-site-navigation a {
+  color: white;
+}
+
+.dark .xlog-site-navigation a {
+  color: var(--tw-color-gray-600);
+}
+
+.xlog-site-connect div:focus-visible {
+  outline: none;
 }
 
 /* background */
